@@ -51,15 +51,15 @@ void Adc1_Init()
 int main (void)
 {
 	float result,result1;
-	//LED_Init();
+	LED_Init();
 	USART_Configuration();
 	uart_exit();
 
 	while (1)
 	{
-//		Adc_Init();
-//		result=adc_result*3600.00/1023;
-//		printf ("\n\rThe adc input = %.2f\n\r",result);
+		Adc_Init();
+		result=adc_result*3600.00/1023;
+		printf ("\n\rThe adc input = %.2f\n\r",result);
 		Adc1_Init();
 		result1=adc_result1*3600.0000/1023.0000/1000.0000;
 		printf ("\n\rThe adc1 input = %.4f\n\r",result1);
