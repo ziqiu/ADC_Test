@@ -54,8 +54,8 @@ int main (void)
 	LED_Init();
 	USART_Configuration();
 	uart_exit();
-
-	while (1)
+	
+	for (;;)
 	{
 		Adc_Init();
 		result=adc_result*3600.00/1023;
