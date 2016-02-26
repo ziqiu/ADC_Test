@@ -55,9 +55,10 @@ int main (void)
 	USART_Configuration();
 	uart_exit();
 	
+	//function forever
 	for (;;)
 	{
-		Adc_Init();
+		Adc_Init();//ADC config
 		result=adc_result*3600.00/1023;
 		printf ("\n\rThe adc input = %.2f\n\r",result);
 		Adc1_Init();
